@@ -1,0 +1,11 @@
+li,
+i,
+h6 {
+  cursor: pointer;
+}
+
+li:hover,
+i:hover,
+h6:hover {
+  color: hsl(136, 65%, 51%);
+}

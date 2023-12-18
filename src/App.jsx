@@ -1,5 +1,6 @@
 import './App.css';
 import Logo from './assets/images/logo.svg';
+import Footerlogo from './assets/images/logo-footer.svg';
 import BgDesktop from './assets/images/bg-intro-desktop.svg';
 import BgMobile from './assets/images/bg-intro-mobile.svg';
 import MockMobile from './assets/images/image-mockups.png';
@@ -199,13 +200,37 @@ function App() {
           </div>
         </div>
       </div>
-      <footer className="bg-primary-DarkBlue">
-        <div className="mx-auto max-w-6xl">
-          <div className="flex flex-col justify-between items-center">
-            <img src={Logo} alt="footer logo" />
-            <div>
-              
+      <footer className="bg-primary-DarkBlue py-20">
+        <div className="mx-auto max-w-6xl flex justify-between items-center">
+          <div className="flex flex-col justify-between items-start h-20">
+            <img src={Footerlogo} alt="footer logo" />
+            <div className="flex justify-between items-center w-36">
+              <i className="text-neutral-White cursor-pointer text-xl fa-brands fa-square-facebook"></i>
+              <i className="text-neutral-White cursor-pointer text-xl fa-brands fa-instagram"></i>
+              <i className="text-neutral-White cursor-pointer text-xl fa-brands fa-twitter"></i>
+              <i className="text-neutral-White cursor-pointer text-xl fa-brands fa-pinterest"></i>
             </div>
+          </div>
+          <ul className="flex flex-col justify-evenly items-start text-neutral-LightGrayishBlue opacity-80 h-28">
+            <li>About Us</li>
+            <li>Contact</li>
+            <li>Blog</li>
+          </ul>
+          <ul className="flex flex-col justify-evenly items-start text-neutral-LightGrayishBlue opacity-80 h-28">
+            <li>Careers</li>
+            <li>Support</li>
+            <li>Privacy Policy</li>
+          </ul>
+          <div className="flex flex-col items-end justify-between h-20">
+            <button
+              className="text-neutral-White bg-gradient-to-br from-primary-LimeGreen to-primary-BrightCyan hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-full text-sm px-5 py-2.5 text-center"
+              type="submit"
+            >
+              Request Invite
+            </button>
+            <p className="text-xxs font-thin">
+              © Easybank. All Rights Reserved
+            </p>
           </div>
         </div>
       </footer>
