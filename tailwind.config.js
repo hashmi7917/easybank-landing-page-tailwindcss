@@ -13,6 +13,7 @@ export default {
       },
       fontSize: {
         md: '16px',
+        xxs: '12px',
       },
       colors: {
         primary: {

@@ -7,6 +7,10 @@ import Banking from './assets/images/icon-online.svg';
 import Budgeting from './assets/images/icon-budgeting.svg';
 import Onboarding from './assets/images/icon-onboarding.svg';
 import Openapi from './assets/images/icon-api.svg';
+import Currency from './assets/images/image-currency.jpg';
+import Restaurant from './assets/images/image-restaurant.jpg';
+import Plane from './assets/images/image-plane.jpg';
+import Confetti from './assets/images/image-confetti.jpg';
 
 function App() {
   return (
@@ -77,7 +81,7 @@ function App() {
         <div className="mx-auto max-w-6xl">
           <div className="flex flex-col justify-evenly">
             <div className="w-1/2">
-              <h2 className="text-primary-DarkBlue text-2xl">
+              <h2 className="text-primary-DarkBlue text-3xl">
                 Why choose Easybank?
               </h2>
               <p className="leading-relaxed py-4">
@@ -85,7 +89,7 @@ function App() {
                 financial hub. Control your finances like never before.
               </p>
             </div>
-            <div className="flex justify-around items-center pt-10">
+            <div className="flex justify-around items-center pt-12">
               <div className="flex flex-col justify-between items-start">
                 <img className="w-10" src={Banking} alt="online banking" />
                 <h4 className="text-primary-DarkBlue text-xl pt-6 pb-5">
@@ -130,6 +134,81 @@ function App() {
           </div>
         </div>
       </div>
+      <div className="w-full bg-neutral-VeryLightGray">
+        <div className="mx-auto max-w-6xl py-20">
+          <div className="flex flex-col items-start">
+            <h2 className="text-primary-DarkBlue text-3xl">Latest Articles</h2>
+            <div className="w-full flex justify-between items-center pt-12">
+              <div className="w-64 flex flex-col justify-evenly items-start shadow-md bg-neutral-White pb-5 rounded-sm">
+                <img className="w-full" src={Currency} alt="currency" />
+                <div className="pr-3 pl-5">
+                  <p className="pt-4 text-xxs">By Claire Robinson</p>
+                  <h6 className="text-primary-DarkBlue py-2 pr-4">
+                    Receive money in any currency with no fees
+                  </h6>
+                  <p className="text-sm">
+                    The world is getting smaller and we’re becoming more mobile.
+                    So why should you be forced to only receive money in a
+                    single …
+                  </p>
+                </div>
+              </div>
+              <div className="w-64 flex flex-col justify-evenly items-start shadow-md bg-neutral-White pb-5 rounded-sm">
+                <img className="w-full" src={Restaurant} alt="currency" />
+                <div className="pr-3 pl-5">
+                  <p className="pt-4 text-xxs">By Wilson Hutton</p>
+                  <h6 className="text-primary-DarkBlue py-2 pr-4">
+                    Treat yourself without worrying about money
+                  </h6>
+                  <p className="text-sm">
+                    Our simple budgeting feature allows you to separate out your
+                    spending and set realistic limits each month. That means you
+                    …
+                  </p>
+                </div>
+              </div>
+              <div className="w-64 flex flex-col justify-evenly items-start shadow-md bg-neutral-White pb-5 rounded-sm">
+                <img className="w-full" src={Plane} alt="currency" />
+                <div className="pr-3 pl-5">
+                  <p className="pt-4 text-xxs">By Wilson Hutton</p>
+                  <h6 className="text-primary-DarkBlue py-2 pr-4">
+                    Take your Easybank card wherever you go
+                  </h6>
+                  <p className="text-sm">
+                    We want you to enjoy your travels. This is why we don’t
+                    charge any fees on purchases while you’re abroad. We’ll even
+                    show you …
+                  </p>
+                </div>
+              </div>
+              <div className="w-64 flex flex-col justify-evenly items-start shadow-md bg-neutral-White pb-5 rounded-sm">
+                <img className="w-full" src={Confetti} alt="currency" />
+                <div className="pr-3 pl-4">
+                  <p className="pt-4 text-xxs">By Claire Robinson</p>
+                  <h6 className="text-primary-DarkBlue py-2 pr-4">
+                    Our invite-only Beta accounts are now live!
+                  </h6>
+                  <p className="text-sm">
+                    After a lot of hard work by the whole team, we’re excited to
+                    launch our closed beta. It’s easy to request an invite
+                    through the site ...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer className="bg-primary-DarkBlue">
+        <div className="mx-auto max-w-6xl">
+          <div className="flex flex-col justify-between items-center">
+            <img src={Logo} alt="footer logo" />
+            <div>
+              
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
