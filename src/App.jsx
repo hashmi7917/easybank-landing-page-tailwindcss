@@ -66,7 +66,7 @@ function App() {
           </div>
 
           <div
-            className="w-full relative overflow-hidden max-lg:hidden max-xl:scale-110 transition-all ease-in-out"
+            className="w-full relative max-lg:hidden max-xl:scale-110 transition-all ease-in-out"
             style={{
               minWidth: '50vw',
               minHeight: '800px',
