@@ -16,9 +16,9 @@ import Confetti from './assets/images/image-confetti.jpg';
 
 function App() {
   return (
-    <div className="w-full mx-auto">
+    <div className="w-full mx-auto min-w-[400px]">
       <div className="w-full sticky top-0 z-50 bg-neutral-White shadow-sm">
-        <div className="mx-auto container">
+        <div className="mx-auto container max-xl:max-w-4xl">
           <nav className="flex justify-between items-center py-4 px-2 z-10 max-md:px-8 max-md:py-6 transition-all ease-linear">
             <picture className="w-1/3">
               <img src={Logo} alt="Logo" />
@@ -67,26 +67,26 @@ function App() {
 
           <div className="w-full relative overflow-hidden max-lg:hidden transition-all ease-in-out pb-60">
             <img
-              className="w-full min-h-[800px] relative my-auto -mt-48 ml-20 bg-contain bg-no-repeat max-xl:scale-120 aspect-auto"
+              className="max-w-4xl min-h-[800px] relative my-auto -mt-48 ml-20 bg-cover bg-no-repeat max-xl:scale-120 aspect-auto max-xl:-mt-48 max-xl:ml-0"
               src={DesktopIntro}
               alt="intro"
             />
             <img
               id="mock"
-              className="absolute -right-32 -top-32 max-xl:scale-90"
+              className="absolute -right-32 -top-32 max-xl:scale-120"
               src={MockMobile}
               alt="mockup mobile"
             />
           </div>
-          <div className="w-full relative hidden max-lg:block">
+          <div className="w-full relative overflow-hidden hidden max-lg:block">
             <img
-              className="w-full max-h-[520px] relative bg-center bg-no-repeat bg-contain"
+              className="w-full min-h-[520px] relative bg-center bg-no-repeat bg-contain"
               src={MobileIntro}
               alt="Intro Mobile"
             />
             <img
               id="mock"
-              className="min-h-[520px] bg-cover absolute right-0 -top-[11.5rem] max-w-lg mx-auto max-lg:left-0"
+              className="min-h-[520px] bg-cover absolute right-0 -top-[12rem] mx-auto max-lg:left-0 max-lg:scale-90"
               src={MockMobile}
               alt="mockup mobile"
             />
@@ -94,7 +94,7 @@ function App() {
         </div>
       </header>
       <div className="w-full bg-neutral-LightGrayishBlue -mt-52 py-32 max-lg:pt-20 max-lg:py-0 max-lg:pb-10 max-lg:mt-0 max-lg:text-center">
-        <div className="mx-auto container">
+        <div className="mx-auto container max-xl:max-w-4xl">
           <div className="flex flex-col justify-evenly">
             <div className="w-1/2 max-lg:w-3/4 max-lg:mx-auto">
               <h2 className="text-primary-DarkBlue text-3xl max-lg:text-4xl max-lg:pb-2">
@@ -167,7 +167,7 @@ function App() {
         </div>
       </div>
       <div className="w-full bg-neutral-VeryLightGray">
-        <div className="mx-auto container py-20 max-md:py-24">
+        <div className="mx-auto container py-20 max-md:py-24 max-xl:max-w-4xl">
           <div className="flex flex-col items-start max-lg:items-center">
             <h2 className="text-primary-DarkBlue text-3xl">Latest Articles</h2>
             <div className="w-full flex max-md:flex-col justify-between items-center pt-12 max-md:flex-wrap">
@@ -232,7 +232,7 @@ function App() {
         </div>
       </div>
       <footer className="bg-primary-DarkBlue py-20 px-8">
-        <div className="mx-auto container flex max-md:flex-col justify-between items-center">
+        <div className="mx-auto container flex max-md:flex-col justify-between items-center max-xl:max-w-4xl">
           <div className="flex flex-col justify-between items-start h-20 max-md:h-28 max-md:items-center max-md:pb-5">
             <img src={Footerlogo} alt="footer logo" />
             <div className="flex justify-between items-center w-36 max-md:w-52">
