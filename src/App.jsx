@@ -68,12 +68,13 @@ function App() {
           <div
             className="w-full relative overflow-hidden bg-BgDesktop max-lg:hidden max-xl:scale-110 transition-all ease-in-out"
             style={{
-              minWidth: '50vw',
-              minHeight: '800px',
+              backgroundImage: `url(${BgDesktop})`,
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
               backgroundPositionX: '1.875rem',
               backgroundPositionY: '-12.5rem',
+              minWidth: '50vw',
+              minHeight: '800px',
             }}
           >
             <img
