@@ -3,7 +3,7 @@ import Logo from './assets/images/logo.svg';
 import HamMenu from './assets/images/icon-hamburger.svg';
 import Footerlogo from './assets/images/logo-footer.svg';
 import DesktopIntro from './assets/images/bg-intro-desktop.svg';
-import BgMobile from './assets/images/bg-intro-mobile.svg';
+import MobileIntro from './assets/images/bg-intro-mobile.svg';
 import MockMobile from './assets/images/image-mockups.png';
 import Banking from './assets/images/icon-online.svg';
 import Budgeting from './assets/images/icon-budgeting.svg';
@@ -48,7 +48,7 @@ function App() {
 
       <header className="max-lg:flex-col max-lg:items-center max-lg:text-center w-full flex justify-between items-center bg-neutral-VeryLightGray max-lg:pb-12">
         <div className="w-full my-auto mx-auto flex max-lg:flex-col-reverse justify-between items-center">
-          <div className="max-lg:w-10/12 max-lg:mx-auto flex flex-col justify-evenly items-start max-lg:items-center self-start max-lg:self-center max-lg:mt-0 max-lg:pb-12 my-auto pl-20 max-lg:pl-0 max-lg:pt-20 pb-20">
+          <div className="max-lg:w-10/12 max-lg:mx-auto flex flex-col justify-evenly items-start max-lg:items-center self-start max-lg:self-center max-lg:mt-0 max-lg:pb-12 my-auto pl-20 max-lg:pl-0 pb-20 max-md:-mt-12">
             <h1 className="text-5xl text-primary-DarkBlue tracking-wide pr-8 max-lg:pr-0">
               Next generation digital banking
             </h1>
@@ -65,18 +65,7 @@ function App() {
             </button>
           </div>
 
-          <div
-            className="w-full relative overflow-hidden bg-BgDesktop max-lg:hidden  transition-all ease-in-out pb-60"
-            // style={{
-            //   backgroundImage: `url(${DesktopIntro})`,
-            //   backgroundRepeat: 'no-repeat',
-            //   backgroundSize: 'cover',
-            //   backgroundPositionX: '1.875rem',
-            //   backgroundPositionY: '-12.5rem',
-            //   minWidth: '50vw',
-            //   minHeight: '800px',
-            // }}
-          >
+          <div className="w-full relative overflow-hidden max-lg:hidden transition-all ease-in-out pb-60">
             <img
               className="w-full min-h-[800px] relative my-auto -mt-48 ml-20 bg-contain bg-no-repeat max-xl:scale-120 aspect-auto"
               src={DesktopIntro}
@@ -89,19 +78,15 @@ function App() {
               alt="mockup mobile"
             />
           </div>
-          <div
-            className="w-full relative hidden max-lg:block mb-12"
-            style={{
-              minHeight: '45vh',
-              backgroundImage: `url(${BgMobile})`,
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-              backgroundPosition: '50%',
-            }}
-          >
+          <div className="w-full relative hidden max-lg:block">
+            <img
+              className="w-full max-h-[520px] relative bg-center bg-no-repeat bg-contain"
+              src={MobileIntro}
+              alt="Intro Mobile"
+            />
             <img
               id="mock"
-              className="absolute right-0 -top-48 scale-90 max-w-lg mx-auto max-lg:left-0"
+              className="min-h-[520px] bg-cover absolute right-0 -top-[11.5rem] max-w-lg mx-auto max-lg:left-0"
               src={MockMobile}
               alt="mockup mobile"
             />
