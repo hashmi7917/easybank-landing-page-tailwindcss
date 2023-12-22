@@ -25,16 +25,12 @@ function App() {
     let mock = document.getElementById('mockMobile');
     ReactDOM.findDOMNode(mock).style.display = 'none';
     ReactDOM.findDOMNode(main).style.filter = 'grayscale(80%)';
-
-    setTimeout(() => {
-      ReactDOM.findDOMNode(sidemenu).style.display = 'none';
-    }, '2000');
   }
   function closeNav(e) {
     let mock = document.getElementById('mockMobile');
     ReactDOM.findDOMNode(mock).style.display = 'block';
     let main = document.getElementById('main');
-    ReactDOM.findDOMNode(main).style.filter = 'grayscale(0%)';
+    ReactDOM.findDOMNode(main).style.filter = '';
     let sidemenu = document.getElementById('sidemenu');
     ReactDOM.findDOMNode(sidemenu).style.display = 'none';
   }
