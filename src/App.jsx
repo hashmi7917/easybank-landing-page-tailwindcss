@@ -26,9 +26,9 @@ function App() {
     ReactDOM.findDOMNode(mock).style.display = 'none';
     ReactDOM.findDOMNode(main).style.filter = 'grayscale(80%)';
 
-    // setTimeout(() => {
-    //   ReactDOM.findDOMNode(sidemenu).style.display = 'none';
-    // }, '2000');
+    setTimeout(() => {
+      ReactDOM.findDOMNode(sidemenu).style.display = 'none';
+    }, '2000');
   }
   function closeNav(e) {
     let mock = document.getElementById('mockMobile');
