@@ -28,6 +28,10 @@ export default {
           White: 'hsl(0, 0%, 100%)',
         },
       },
+      backgroundImage: {
+        BgDesktop: "url('./src/assets/images/bg-intro-desktop.svg')",
+        BgMobile: "url('./src/assets/images/bg-intro-mobile.svg')",
+      },
     },
   },
   plugins: [require('tailwindcss-animatecss')],
