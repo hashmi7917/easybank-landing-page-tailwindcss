@@ -1,6 +1,8 @@
+import ReactDOM from 'react-dom';
 import './App.css';
 import Logo from './assets/images/logo.svg';
 import HamMenu from './assets/images/icon-hamburger.svg';
+import CloseMenu from './assets/images/icon-close.svg';
 import Footerlogo from './assets/images/logo-footer.svg';
 import DesktopIntro from './assets/images/bg-intro-desktop.svg';
 import MobileIntro from './assets/images/bg-intro-mobile.svg';
@@ -15,8 +17,30 @@ import Plane from './assets/images/image-plane.jpg';
 import Confetti from './assets/images/image-confetti.jpg';
 
 function App() {
+  function openNav(e) {
+    let sidemenu = document.getElementById('sidemenu');
+    ReactDOM.findDOMNode(sidemenu).style.display = 'block';
+    let main = document.getElementById('main');
+    // ReactDOM.findDOMNode(main).style.opacity = '0.9';
+    let mock = document.getElementById('mockMobile');
+    ReactDOM.findDOMNode(mock).style.display = 'none';
+    ReactDOM.findDOMNode(main).style.filter = 'grayscale(80%)';
+
+    // setTimeout(() => {
+    //   ReactDOM.findDOMNode(sidemenu).style.display = 'none';
+    // }, '2000');
+  }
+  function closeNav(e) {
+    let mock = document.getElementById('mockMobile');
+    ReactDOM.findDOMNode(mock).style.display = 'block';
+    let main = document.getElementById('main');
+    ReactDOM.findDOMNode(main).style.filter = 'grayscale(0%)';
+    let sidemenu = document.getElementById('sidemenu');
+    ReactDOM.findDOMNode(sidemenu).style.display = 'none';
+  }
+
   return (
-    <div className="w-full mx-auto min-w-[400px]">
+    <div id="main" className="w-full mx-auto min-w-[400px]">
       <div className="w-full sticky top-0 z-50 bg-neutral-White shadow-sm">
         <div className="mx-auto container max-xl:max-w-4xl">
           <nav className="flex justify-between items-center py-4 px-2 z-10 max-md:px-8 max-md:py-6 transition-all ease-linear">
@@ -24,23 +48,46 @@ function App() {
               <img src={Logo} alt="Logo" />
             </picture>
 
-            <ul className="w-1/3 flex justify-evenly items-center text-sm max-md:hidden">
-              <li>Home</li>
-              <li>About</li>
-              <li>Contact</li>
-              <li>Blog</li>
-              <li>Careers</li>
+            <div
+              id="sidemenu"
+              className="w-9/12 hidden bg-neutral-White text-primary-DarkBlue font-normal text-xl text-center absolute right-12 top-24 transition-all ease-in shadow-2xl py-8 rounded-xl"
+            >
+              <div className="flex flex-col ">
+                <img
+                  className="w-5 self-end mr-4 transition-all ease-in-out"
+                  onClick={closeNav}
+                  src={CloseMenu}
+                  alt="close menu"
+                />
+
+                <ul className="w-full flex flex-col justify-around items-center mx-auto h-48 transition-all ease-in-out duration-75">
+                  <li className="cursor-pointer">Home</li>
+                  <li className="cursor-pointer">About</li>
+                  <li className="cursor-pointer">Contact</li>
+                  <li className="cursor-pointer">Blog</li>
+                  <li className="cursor-pointer">Careers</li>
+                </ul>
+              </div>
+            </div>
+
+            <ul className="w-1/3 max-md:w-1/2 flex justify-evenly items-center text-sm max-sm:hidden">
+              <li className="max-md:mx-2">Home</li>
+              <li className="max-md:mx-2">About</li>
+              <li className="max-md:mx-2">Contact</li>
+              <li className="max-md:mx-2">Blog</li>
+              <li className="max-md:mx-2">Careers</li>
             </ul>
+
             <div className="flex justify-end w-1/3 mx-auto">
               <button
-                className="text-neutral-White bg-gradient-to-br from-primary-LimeGreen to-primary-BrightCyan hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-full text-sm px-10 py-3.5 text-center max-md:hidden"
+                className="text-neutral-White bg-gradient-to-br from-primary-LimeGreen to-primary-BrightCyan hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-full text-sm px-8 py-3 text-center max-md:hidden"
                 type="submit"
               >
                 Request Invite
               </button>
             </div>
-            <picture className="hidden max-md:block">
-              <img src={HamMenu} alt="hamburger menu" />
+            <picture className="hidden max-sm:block">
+              <img onClick={openNav} src={HamMenu} alt="hamburger menu" />
             </picture>
           </nav>
         </div>
@@ -58,7 +105,7 @@ function App() {
               more.
             </p>
             <button
-              className="text-neutral-White bg-gradient-to-br from-primary-LimeGreen to-primary-BrightCyan hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-full text-sm px-10 py-3.5 text-center"
+              className="text-neutral-White bg-gradient-to-br from-primary-LimeGreen to-primary-BrightCyan hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-full text-sm px-8 py-3 text-center"
               type="submit"
             >
               Request Invite
@@ -80,13 +127,13 @@ function App() {
           </div>
           <div className="w-full relative overflow-hidden hidden max-lg:block">
             <img
-              className="w-full min-h-[520px] relative bg-center bg-no-repeat bg-contain"
+              className="w-full max-h-[480px] relative bg-center bg-no-repeat bg-cover"
               src={MobileIntro}
               alt="Intro Mobile"
             />
             <img
-              id="mock"
-              className="min-h-[520px] bg-cover absolute right-0 -top-[12rem] mx-auto max-lg:left-0 max-lg:scale-90"
+              id="mockMobile"
+              className="max-h-[80vh] bg-cover absolute right-0 -top-[11rem] mx-auto max-lg:left-0 max-lg:scale-120"
               src={MockMobile}
               alt="mockup mobile"
             />
@@ -255,7 +302,7 @@ function App() {
           </ul>
           <div className="flex flex-col items-end max-md:items-center justify-between h-20 max-md:pt-4">
             <button
-              className="text-neutral-White bg-gradient-to-br from-primary-LimeGreen to-primary-BrightCyan hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-full text-sm px-10 py-3.5 text-center"
+              className="text-neutral-White bg-gradient-to-br from-primary-LimeGreen to-primary-BrightCyan hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-full text-sm px-8 py-3 text-center"
               type="submit"
             >
               Request Invite
