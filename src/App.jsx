@@ -48,7 +48,7 @@ function App() {
 
       <header className="max-lg:flex-col max-lg:items-center max-lg:text-center w-full flex justify-between items-center bg-neutral-VeryLightGray max-lg:pb-12">
         <div className="w-full my-auto mx-auto flex max-lg:flex-col-reverse justify-between items-center">
-          <div className="max-lg:w-10/12 max-lg:mx-auto flex flex-col justify-evenly items-start max-lg:items-center self-start max-lg:self-center max-lg:mt-0 max-lg:pb-12 my-auto pl-20 max-lg:pl-0 max-lg:pt-20">
+          <div className="max-lg:w-10/12 max-lg:mx-auto flex flex-col justify-evenly items-start max-lg:items-center self-start max-lg:self-center max-lg:mt-0 max-lg:pb-12 my-auto pl-20 max-lg:pl-0 max-lg:pt-20 pb-20">
             <h1 className="text-5xl text-primary-DarkBlue tracking-wide pr-8 max-lg:pr-0">
               Next generation digital banking
             </h1>
@@ -66,17 +66,22 @@ function App() {
           </div>
 
           <div
-            className="w-full relative overflow-hidden bg-BgDesktop max-lg:hidden max-xl:scale-110 transition-all ease-in-out"
-            style={{
-              backgroundImage: `url(${DesktopIntro})`,
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-              backgroundPositionX: '1.875rem',
-              backgroundPositionY: '-12.5rem',
-              minWidth: '50vw',
-              minHeight: '800px',
-            }}
+            className="w-full relative overflow-hidden bg-BgDesktop max-lg:hidden  transition-all ease-in-out pb-60"
+            // style={{
+            //   backgroundImage: `url(${DesktopIntro})`,
+            //   backgroundRepeat: 'no-repeat',
+            //   backgroundSize: 'cover',
+            //   backgroundPositionX: '1.875rem',
+            //   backgroundPositionY: '-12.5rem',
+            //   minWidth: '50vw',
+            //   minHeight: '800px',
+            // }}
           >
+            <img
+              className="w-full min-h-[800px] relative my-auto -mt-48 ml-20 bg-contain bg-no-repeat max-xl:scale-120 aspect-auto"
+              src={DesktopIntro}
+              alt="intro"
+            />
             <img
               id="mock"
               className="absolute -right-32 -top-32 max-xl:scale-90"
