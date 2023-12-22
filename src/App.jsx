@@ -260,7 +260,7 @@ function App() {
             >
               Request Invite
             </button>
-            <p className="text-xxs font-thin max-md:pt-6 max-md:text-md">
+            <p className="text-xxs font-thin max-md:pt-6 max-md:text-md pt-6">
               © Easybank. All Rights Reserved
             </p>
           </div>
