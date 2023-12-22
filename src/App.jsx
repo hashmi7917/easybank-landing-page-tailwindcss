@@ -17,7 +17,7 @@ import Plane from './assets/images/image-plane.jpg';
 import Confetti from './assets/images/image-confetti.jpg';
 
 function App() {
-  function openNav(e) {
+  function openNav() {
     let sidemenu = document.getElementById('sidemenu');
     ReactDOM.findDOMNode(sidemenu).style.display = 'block';
     let main = document.getElementById('main');
@@ -26,7 +26,7 @@ function App() {
     ReactDOM.findDOMNode(mock).style.display = 'none';
     ReactDOM.findDOMNode(main).style.filter = 'grayscale(80%)';
   }
-  function closeNav(e) {
+  function closeNav() {
     let mock = document.getElementById('mockMobile');
     ReactDOM.findDOMNode(mock).style.display = 'block';
     let main = document.getElementById('main');
@@ -40,17 +40,17 @@ function App() {
       <div className="w-full sticky top-0 z-50 bg-neutral-White shadow-sm">
         <div className="mx-auto container max-xl:max-w-4xl">
           <nav className="flex justify-between items-center py-4 px-2 z-10 max-md:px-8 max-md:py-6 transition-all ease-linear">
-            <picture className="w-1/3">
+            <picture className="w-1/2">
               <img src={Logo} alt="Logo" />
             </picture>
 
             <div
               id="sidemenu"
-              className="w-9/12 hidden bg-neutral-White text-primary-DarkBlue font-normal text-xl text-center absolute right-12 top-24 transition-all ease-in shadow-2xl py-8 rounded-xl"
+              className="hidden bg-neutral-White text-primary-DarkBlue font-normal text-xl text-center absolute right-12 top-24 transition-all ease-in shadow-2xl py-8 px-40 rounded-xl"
             >
               <div className="flex flex-col ">
                 <img
-                  className="w-5 self-end mr-4 transition-all ease-in-out"
+                  className="w-5 self-end absolute right-0 top-0 mr-5 mt-5 transition-all ease-in-out"
                   onClick={closeNav}
                   src={CloseMenu}
                   alt="close menu"
