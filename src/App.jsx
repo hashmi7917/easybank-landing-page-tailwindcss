@@ -2,7 +2,7 @@ import './App.css';
 import Logo from './assets/images/logo.svg';
 import HamMenu from './assets/images/icon-hamburger.svg';
 import Footerlogo from './assets/images/logo-footer.svg';
-import BgDesktop from './assets/images/bg-intro-desktop.svg';
+import DesktopIntro from './assets/images/bg-intro-desktop.svg';
 import BgMobile from './assets/images/bg-intro-mobile.svg';
 import MockMobile from './assets/images/image-mockups.png';
 import Banking from './assets/images/icon-online.svg';
@@ -68,7 +68,7 @@ function App() {
           <div
             className="w-full relative overflow-hidden bg-BgDesktop max-lg:hidden max-xl:scale-110 transition-all ease-in-out"
             style={{
-              backgroundImage: `url(${BgDesktop})`,
+              backgroundImage: `url(${DesktopIntro})`,
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
               backgroundPositionX: '1.875rem',
